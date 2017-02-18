@@ -538,6 +538,8 @@ ifneq ($(dont_bother),true)
 # --mindepth=2 makes the prunes not work.
 subdir_makefiles := \
 	$(shell build/tools/findleaves.py $(FIND_LEAVES_EXCLUDES) $(subdirs) Android.mk)
+subdir_makefiles_total := $(words $(subdir_makefiles))
+.KATI_READONLY := subdir_makefiles_total
 
 ifeq ($(USE_SOONG),true)
 subdir_makefiles := $(SOONG_ANDROID_MK) $(call filter-soong-makefiles,$(subdir_makefiles))
