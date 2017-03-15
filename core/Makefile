@@ -2,18 +2,20 @@
 
 # Build system colors
 
+# Not if you build with ninja though
+# When you kill people you don't get candy
 ifneq ($(USE_NINJA),false)
   BUILD_WITH_COLORS := 0
 endif
 
 ifneq ($(BUILD_WITH_COLORS),0)
-  CL_RED="-e \033[31m"
-  CL_GRN="-e \033[32m"
-  CL_YLW="-e \033[33m"
-  CL_BLU="-e \033[34m"
-  CL_MAG="-e \033[35m"
-  CL_CYN="-e \033[36m"
-  CL_RST="\033[0m"
+  CL_RED := -e "\033[01;31m"
+  CL_GRN := -e "\033[01;32m"
+  CL_YLW := -e "\033[01;33m"
+  CL_BLU := -e "\033[01;34m"
+  CL_MAG := -e "\033[01;35m"
+  CL_CYN := -e "\033[01;36m"
+  CL_RST := "\033[0m"
 endif
 
 # HACK: clear LOCAL_PATH from including last build target before calling
