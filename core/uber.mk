@@ -16,7 +16,8 @@
 ###################
 # Strict Aliasing #
 ###################
-LOCAL_DISABLE_STRICT :=
+LOCAL_DISABLE_STRICT := \
+        mdnsd
 
 STRICT_ALIASING_FLAGS := \
 	-fstrict-aliasing \
