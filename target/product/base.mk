@@ -105,7 +105,6 @@ PRODUCT_PACKAGES += \
     mediaextractor \
     monkey \
     mtpd \
-    MusicFX \
     ndc \
     netd \
     om \
