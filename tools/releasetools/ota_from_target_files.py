@@ -697,6 +697,14 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   if HasVendorPartition(input_zip):
     system_progress -= 0.1
 
+  script.Print(" ")
+  script.Print(" ____  _          _   ____            _   ")
+  script.Print("|  _ \(_)_  _____| | |  _ \ _   _ ___| |_ ")
+  script.Print("| |_) | \ \/ / _ \ | | | | | | | / __| __|")
+  script.Print("|  __/| |>  <  __/ | | |_| | |_| \__ \ |_ ")
+  script.Print("|_|   |_/_/\_\___|_| |____/ \__,_|___/\__|")
+  script.Print(" ")
+
   # Place a copy of file_contexts.bin into the OTA package which will be used
   # by the recovery program.
   if "selinux_fc" in OPTIONS.info_dict:
