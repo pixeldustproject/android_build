@@ -2010,6 +2010,7 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE)
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 bacon: otapackage
 pixeldust: otapackage
+	$(hide) ./vendor/pixeldust/tools/pd.sh
 
 endif    # build_ota_package
 
